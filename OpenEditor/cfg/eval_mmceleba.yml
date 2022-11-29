@@ -1,0 +1,31 @@
+CONFIG_NAME: 'OpenEditor'
+
+DATASET_NAME: 'mmceleba'
+DATA_DIR: '../../data/face/multi_model_celeba'
+IMG_DIR: 'images'
+WORKERS: 1
+
+TREE:
+    BASE_SIZE: 256
+
+
+TRAIN:
+    FLAG: False
+    BATCH_SIZE: 4
+    NET_G: '../../models/mmceleba_OpenFaceGAN.pth'
+    NET_M: '../../models/mmceleba_OpenEditor.pth'
+    NET_E: '../../DAMSMencoders/best_text_encoder.pth'
+
+
+GAN:
+    Z_DIM: 100
+    C_DIM: 100
+    W_DIM: 512
+    N_MLP: 8
+
+TEXT:
+    CAPTIONS_PKL: 'captions2_mmceleba.pickle'
+    CAPTIONS_PER_IMAGE: 10
+    EMBEDDING_DIM: 256
+    WORDS_NUM: 40
+    USE_PRE_EMB: True
