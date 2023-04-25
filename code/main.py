@@ -38,7 +38,7 @@ def parse_args():
 	parser.add_argument(
 		'--cfg', 
 		type=str,
-		default='cfg/face_v1.0_styleG.yml',  
+		default='cfg/mmceleba.yml',  
 		dest='cfg_file', 
 		help='optional config file', 
 	)
